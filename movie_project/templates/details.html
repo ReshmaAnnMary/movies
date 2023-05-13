@@ -1,0 +1,24 @@
+{% extends 'common.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <img src="{{val.img.url}}">
+        </div>
+        <div class="col-md-3">
+            <h3>{{val.name}}</h3>
+           <h5> {{val.year}}</h5>
+            {{val.desc}}
+            <br>
+            <a class="btn btn-primary" href="{% url 'movie_app:update' val.id %}">EDIT</a>
+            <a class="btn btn-primary" href="{% url 'movie_app:delete' val.id %}">DELETE</a>
+        </div>
+    </div>
+</div>
+
+
+
+<br>
+<br>
+
+{% endblock %}
